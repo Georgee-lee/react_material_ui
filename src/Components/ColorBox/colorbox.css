@@ -71,7 +71,7 @@
   opacity: 0;
   z-index: 0;
 
-  transition: transform 0.6s ease-in-out;
+  transition: transform 1s ease-in-out;
   transform: scale(0.1); /* div의 정중앙에서 시작하기 위해 시작값을 0.1로 */
 }
 
@@ -106,7 +106,7 @@
   transform: scale(1);
   z-index: 20;
   transition: all 0.4s ease-in-out;
-  transition-delay: 0.1s;
+  transition-delay: 0.05s;
 }
 
 .copy-message h1 {
