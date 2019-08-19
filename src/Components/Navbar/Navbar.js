@@ -10,7 +10,7 @@ class Navbar extends Component {
     return (
       <header className="Navbar">
         <div className="logo">
-          <a href="#">reactColorPicker</a>
+          <a href="#">reactcolorpicker</a>
         </div>
         <div className="slider-container">
           <span>Level: {level}</span>
