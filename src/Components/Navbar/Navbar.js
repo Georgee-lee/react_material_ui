@@ -4,10 +4,10 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Snackbar from "@material-ui/core/Snackbar";
 import CloseIcon from "@material-ui/icons/Close";
+import { IconButton } from "@material-ui/core";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import "./navbar.css";
-import { IconButton } from "@material-ui/core";
 
 class Navbar extends Component {
   constructor(props) {
@@ -49,7 +49,7 @@ class Navbar extends Component {
           <Select value={format} onChange={this.handleChange}>
             <MenuItem value="hex">HEX - #ffffff</MenuItem>
             <MenuItem value="rgb">RGB - rgb(255, 255, 255)</MenuItem>
-            <MenuItem value="rgba">RGBA - rgba(255, 255, 255, 0.5)</MenuItem>
+            <MenuItem value="rgba">RGBA - rgba(255, 255, 255, 1.0)</MenuItem>
           </Select>
         </div>
         <Snackbar
