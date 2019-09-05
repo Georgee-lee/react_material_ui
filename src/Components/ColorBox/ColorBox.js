@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import CopyToClipBoard from "react-copy-to-clipboard";
 import "./colorbox.css";
 
@@ -15,14 +17,17 @@ class ColorBox extends Component {
   };
 
   render() {
-    const { name, background } = this.props;
+    const { name, background, moreUrl } = this.props;
     const { copied } = this.state;
 
     return (
       <CopyToClipBoard text={background} onCopy={this.changeCopyState}>
         <div className="ColorBox" style={{ background }}>
           {/* copy-container를 transform으로 커지게 하면 글자들도 다 커짐... */}
-          <div className={`copy-overlay ${copied && "show"}`} style={{ background }} />
+          <div
+            className={`copy-overlay ${copied && "show"}`}
+            style={{ background }}
+          />
           <div className={`copy-message ${copied && "show"}`}>
             <h1>copied!</h1>
             <p>{this.props.background}</p>
@@ -33,7 +38,9 @@ class ColorBox extends Component {
             </div>
             <button className="copy-button">Copy</button>
           </div>
-          <span className="see-more">More</span>
+          <Link to={moreUrl} onClick={e => e.stopPropagation()}>
+            <span className="see-more">More</span>
+          </Link>
         </div>
       </CopyToClipBoard>
     );
